@@ -1,0 +1,15 @@
+[project]
+name = "pandas-cookbook-second-edition"
+version = "0.1.0"
+description = "Cloned from https://github.com/PacktPublishing/Pandas-Cookbook-Second-Edition"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "notebook>=7.5.0",
+    "pandas>=2.3.3",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.1.0",
+]

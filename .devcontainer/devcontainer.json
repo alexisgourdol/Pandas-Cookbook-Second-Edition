@@ -1,0 +1,42 @@
+{
+    "name": "Pandas-Cookbook",
+    "build": {
+        "context": "..",
+        "dockerfile": "Dockerfile",
+        "target": "dev",
+        "args": {
+            "PLATFORM": "arm64"
+        }
+    },
+    "workspaceFolder": "/workspace",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "remoteUser": "root",
+    "postCreateCommand": "rm -rf /workspace/.venv && uv venv /workspace/.venv && uv sync --dev",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "charliermarsh.ruff"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/workspace/.venv/bin/python",
+                "python.testing.pytestEnabled": true,
+                "python.testing.pytestArgs": [
+                    "."
+                ],
+                "[python]": {
+                    "editor.defaultFormatter": "charliermarsh.ruff",
+                    "editor.formatOnSave": true,
+                    "editor.codeActionsOnSave": {
+                        "source.fixAll": "explicit",
+                        "source.organizeImports": "explicit"
+                    }
+                },
+                "ruff.path": [
+                    "/workspace/.venv/bin/ruff"
+                ],
+                "python.linting.enabled": true
+            }
+        }
+    }
+}
