@@ -5,8 +5,13 @@ description = "Cloned from https://github.com/PacktPublishing/Pandas-Cookbook-Se
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "html5lib>=1.1",
+    "lxml>=6.0.2",
     "notebook>=7.5.0",
+    "openpyxl>=3.1.5",
     "pandas>=2.3.3",
+    "pyarrow>=22.0.0",
+    "sqlalchemy>=2.0.44",
 ]
 
 [dependency-groups]
