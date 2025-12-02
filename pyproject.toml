@@ -15,6 +15,7 @@ dependencies = [
     "requests-cache>=1.2.1",
     "ruff>=0.14.7",
     "sqlalchemy>=2.0.44",
+    "yfinance>=0.2.66",
 ]
 
 [dependency-groups]
