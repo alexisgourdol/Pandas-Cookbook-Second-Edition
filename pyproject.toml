@@ -3,7 +3,7 @@ name = "pandas-cookbook-second-edition"
 version = "0.1.0"
 description = "Cloned from https://github.com/PacktPublishing/Pandas-Cookbook-Second-Edition"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.12, <3.14"
 dependencies = [
     "html5lib>=1.1",
     "lxml>=6.0.2",
@@ -15,9 +15,10 @@ dependencies = [
     "pyarrow>=22.0.0",
     "requests-cache>=1.2.1",
     "ruff>=0.14.7",
-    "scipy>=1.16.3",
-    "seaborn>=0.13.2",
+    "scipy==1.13",
+    "seaborn==0.10.1",
     "sqlalchemy>=2.0.44",
+    "ydata-profiling>=4.12.2",
     "yfinance>=0.2.66",
 ]
 
